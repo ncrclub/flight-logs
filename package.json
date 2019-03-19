@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/ncrclub/flight-logs/issues"
   },
-  "homepage": "https://github.com/ncrclub/flight-logs#readme"
+  "homepage": "https://github.com/ncrclub/flight-logs#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
+
