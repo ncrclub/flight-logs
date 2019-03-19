@@ -1,0 +1,29 @@
+{
+  "name": "flight-logs",
+  "version": "1.0.0",
+  "description": "NCR Club Flight Logs",
+  "main": "flight-logs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncrclub/flight-logs.git"
+  },
+  "keywords": [
+    "NCR",
+    "Launch",
+    "Logs",
+    "Flight",
+    "Logs",
+    "Northern",
+    "Colorado",
+    "Rocketry"
+  ],
+  "author": "Northern Colorado Rocketry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncrclub/flight-logs/issues"
+  },
+  "homepage": "https://github.com/ncrclub/flight-logs#readme"
+}
