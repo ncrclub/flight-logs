@@ -3,8 +3,12 @@ export REPO=us.gcr.io
 export PROJECT=suckit-150602
 export IMAGE=flight-logs
 
-clean:
-	mvn clean
+clean: stop
+
+stop:
+	docker stop $(IMAGE) >/dev/null 2>&1 || \
+	docker rm $(IMAGE) >/dev/null 2>&1 || \
+	echo
 
 build:
 	#mvn clean install
@@ -12,9 +16,7 @@ build:
 	docker tag $(IMAGE) $(REPO)/$(PROJECT)/$(IMAGE)
 	docker tag $(IMAGE) $(REPO)/$(PROJECT)/$(IMAGE):dev
 
-run:
-	docker stop $(IMAGE) >/dev/null 2>&1
-	docker rm $(IMAGE) >/dev/null 2>&1
+run: stop
 	docker run --name $(IMAGE) -d -p 80:8081 --add-host sql.morsecode-inc.com:173.255.113.87 $(IMAGE) 
 
 push:
