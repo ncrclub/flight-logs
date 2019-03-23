@@ -10,7 +10,7 @@ exports.chartFlightsByFlyers = function (year, height, width, res) {
             if (error) {
                 console.log(error);
             } else {
-                res.render("chart", {id: "flights_by_flyer", height: height, width: width, chart: json});
+                res.render("chart", {id: "flights_by_flyer", height: height, width: width, chart: json, title: year +" Flights - Top 30 Flyers"});
             }
         }
     )
@@ -26,7 +26,7 @@ exports.chartFlightsByMonth = function (year, height, width, res) {
             if (error) {
                 console.log(error);
             } else {
-                res.render("chart", {id: "flights_by_month", height: height, width: width, chart: json});
+                res.render("chart", {id: "flights_by_month", height: height, width: width, chart: json, title: year +" Flights by Month"});
             }
         }
     )
